@@ -1,7 +1,8 @@
-local main = require("terminus.main").new()
+local terminus = require("terminus.terminus").new()
 
 return {
-  setup = function()
-    return main:setup()
+  terminus = terminus,
+  setup = function(config)
+    return terminus:setup(config)
   end,
 }
